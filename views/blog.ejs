@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container-xxl mb-3 post-section">
+    <form action="/" method="post">
+        <textarea style="height: 200px; text-align: left !important;" class="form-control" name="textedit"><%= locals.dataToEdit %></textarea>
+        <input type="hidden" name="id" value=<%= locals.id %>>
+        <button type="submit" class="btn btn-success">Post</button>
+    </form>
+</div>
+
+

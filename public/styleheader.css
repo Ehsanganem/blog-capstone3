@@ -1,0 +1,38 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0; /* Remove default body margin */
+}
+
+.nav {
+    display:absolute;
+    background-color: #f9ca47;
+    padding: 5px 10px; /* Add padding to the navigation for better spacing */
+    height:fit-content
+}
+
+.blog-text {
+    width: 30px;
+    height: fit-content;
+}
+
+#title-text {
+    color: #363479;
+    padding-top: 10px;
+}
+
+.nav-text{
+    position: relative;
+    color: #363479;
+
+}
+
+#home-text{
+    color: #363479;
+   padding-left: 800px;
+   font-size: 1rem;
+}
+#about-text{
+    color: #363479;
+    font-size: 1rem;;
+    
+}

@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background-image: url("backgroundimg.avif");
+    background-size: cover;
+}
+.post-section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+}
+.the-form{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+
+
+
+@media (max-width:380px){
+    .post-text{
+        width:80%;
+    }
+}
+
+

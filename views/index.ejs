@@ -1,0 +1,47 @@
+<%- include("partials/header.ejs") %>
+<style>
+  /* Custom CSS for left-aligning text in posted forms */
+  .post-section .form-control {
+    text-align: left;
+    text-align: left;
+    margin-left: 0;
+    padding:0;
+  }
+  textarea{
+    text-align: left;
+    margin-left: 0;
+    padding:0;
+  }
+</style>
+<div class="container-xxl mb-3 post-section">
+    <h1 style=" font-family: 'Rubik', sans-serif; color: brown;"></h1>
+    <form class="the-form" action="/" method="post">
+        <div class="mb-3">
+            <textarea  class="form-control"
+                type="text"
+                placeholder="Share your thoughts"
+                name="text"
+                id="floatingTextarea2"
+                style="height: 100px;"
+            ></textarea>
+            <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-success"> Post</button>
+        </div>
+        </div>
+    </form>
+
+    <form action="/blog" method="post">
+        <% posts.forEach((post, index) => { %>
+            <div>
+                <h2>Post:</h2>
+                <textarea readonly class="form-control" id="floatingTextarea3"
+                    style="height: 100px; text-align:left !important;" name="text-posted">
+                    <%= post %>
+                </textarea>
+                <!-- "Edit" button inside the loop with the correct index -->
+                <button type="submit" class="btn btn-secondary" name="id" value=<%=index%> > Edit</button>
+                <button type="submit" class="btn btn-danger" formaction="/delete" name="id" value="delete"> Delete</button>
+            </div>
+        <% }); %>
+    </form>
+</div>
